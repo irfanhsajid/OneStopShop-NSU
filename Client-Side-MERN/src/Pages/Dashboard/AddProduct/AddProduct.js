@@ -13,7 +13,7 @@ const AddProduct = () => {
     }
     const handleReviewSubmit = (e) => {
         e.preventDefault();
-        fetch(`https://one-stop-shop-api.vercel.app/addProduct`, {
+        fetch(`http://localhost:5000/addProduct`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(inputData),

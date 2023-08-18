@@ -8,28 +8,28 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //middleware
-//app.use(cors());
-app.use(cors(
-    {
-      origin:"https://onestopshop-nsu.netlify.app", //frontend link setup 
-      methods:["GET","PUT","POST","DELETE"], //methods we will use to interact with the database
-      credentials:true
-    }
-    ))
+app.use(cors());
+// app.use(cors(
+//     {
+//       origin:"*", //frontend link setup 
+//       methods:["GET","PUT","POST","DELETE"], //methods we will use to interact with the database
+//       credentials:true
+//     }
+//     ))
 
-//app.use(express.json());
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://onestopshop-nsu.netlify.app");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "OPTIONS, GET, POST, PUT, PATCH, DELETE"
-    );
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    if (req.method === "OPTIONS") {
-      return res.sendStatus(200);
-    }
-    next();
-  });
+app.use(express.json());
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin", "*");
+//     res.setHeader(
+//       "Access-Control-Allow-Methods",
+//       "OPTIONS, GET, POST, PUT, PATCH, DELETE"
+//     );
+//     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+//     if (req.method === "OPTIONS") {
+//       return res.sendStatus(200);
+//     }
+//     next();
+//   });
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.vaopm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
