@@ -76,7 +76,9 @@ const useFirebase = () => {
 
 
     useEffect(() => {
-        fetch(`https://one-stop-shop-api.vercel.app/users/${user.email}`)
+        fetch(`https://one-stop-shop-api.vercel.app/users/${user.email}`,{
+            credentials:'include'
+        })
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -101,7 +103,9 @@ const useFirebase = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(user)
+            body: JSON.stringify(user),
+            credentials:'include'
+            
         })
             .then()
     }

@@ -10,7 +10,9 @@ const AllProducts = () => {
     const { isLoading } = useAuth();
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://one-stop-shop-api.vercel.app/products')
+        fetch('https://one-stop-shop-api.vercel.app/products', {
+            credentials: 'include'
+        })
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);

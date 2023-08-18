@@ -5,7 +5,9 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("https://one-stop-shop-api.vercel.app/reviews")
+        fetch("https://one-stop-shop-api.vercel.app/reviews",{
+            credentials:'include'
+        })
             .then(res => res.json())
             .then(data => setReviews(data))
     }, []);

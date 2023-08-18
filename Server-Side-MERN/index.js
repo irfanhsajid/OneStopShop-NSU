@@ -5,14 +5,14 @@ const { MongoClient } = require('mongodb');
 const ObjectId = require("mongodb").ObjectId;
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 //middleware
 //app.use(cors());
 app.use(cors(
     {
       origin:"*", //frontend link setup 
-      methods:["POST", "GET","DELETE","PUT"], //methods we will use to interact with the database
+      methods:["GET","PUT","POST","DELETE"], //methods we will use to interact with the database
       credentials:true
     }
     ))
