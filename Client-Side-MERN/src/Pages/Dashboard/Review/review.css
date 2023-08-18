@@ -1,0 +1,13 @@
+.form-bg{
+    background-color:#2F2E41;
+}
+.form-container input , select, textarea{
+    width: 60%;
+}
+
+@media screen and (max-width:500px) {
+    .form-container input , select, textarea{
+        width: 90%;
+        overflow-x: hidden;
+    }
+}

@@ -1,0 +1,39 @@
+.dash-bar{
+    background: #181717ea;
+}
+.dash-left{
+    background-color: #D9873E;
+    height: 100vh;
+    z-index: 1;
+}
+li{
+list-style: none;
+color: white;
+margin-bottom: 20px;
+}
+li a{
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+}
+li a:hover{
+    color: black;
+    border-bottom: 1px solid black;
+}
+.dashboard-text h1{
+    font-weight: bold;
+}
+@media screen and (max-width:980px) {
+    .dash-bar{
+        display: none;
+    }
+    .dash-left{
+       
+        height: 50%;
+    }
+    ul li{
+        display: inline-block;
+        margin-right: 10px;
+       
+    }
+}
