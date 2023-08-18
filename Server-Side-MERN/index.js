@@ -11,7 +11,7 @@ const port = process.env.PORT || 5000;
 //app.use(cors());
 app.use(cors(
     {
-      origin:"*", //frontend link setup 
+      origin:"https://onestopshop-nsu.netlify.app", //frontend link setup 
       methods:["GET","PUT","POST","DELETE"], //methods we will use to interact with the database
       credentials:true
     }
