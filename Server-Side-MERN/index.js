@@ -137,7 +137,7 @@ app.get('/reviews', async (req, res) => {
 // run().catch(console.dir);
 
 app.get('/', (req, res) => {
-    res.send('One Stop Shop Server is running');
+    res.send('One Stop Shop Server is running :: test');
 })
 
 app.get('/test', (req, res) => {
