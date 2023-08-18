@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
     const [isDeleted, setIsDeleted] = useState(null);
 
     useEffect(() => {
-        fetch("http://localhost:3000/orders")
+        fetch("https://one-stop-shop-api.vercel.app/orders")
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [isDeleted]);
@@ -26,7 +26,7 @@ const ManageAllOrders = () => {
                     swal("Poof! One Order has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:3000/deleteOrder/${id}`, {
+                    fetch(`https://one-stop-shop-api.vercel.app/deleteOrder/${id}`, {
                         method: "DELETE",
                         headers: { "content-type": "application/json" }
                     })

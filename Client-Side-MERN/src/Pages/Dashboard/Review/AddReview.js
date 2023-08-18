@@ -15,7 +15,7 @@ const AddReview = () => {
     }
     const handleReviewSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:3000/addReview`, {
+        fetch(`https://one-stop-shop-api.vercel.app/addReview`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(inputData),

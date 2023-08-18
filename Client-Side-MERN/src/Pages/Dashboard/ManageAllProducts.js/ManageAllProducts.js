@@ -7,7 +7,7 @@ const ManageAllProducts = () => {
     const [products, setProducts] = useState([]);
     const [isDeleted, setIsDeleted] = useState(null);
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://one-stop-shop-api.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [isDeleted]);
@@ -26,7 +26,7 @@ const ManageAllProducts = () => {
                     swal("Poof! Your Product has been deleted!", {
                         icon: "success",
                     });
-                    fetch(`http://localhost:3000/deleteProduct/${id}`, {
+                    fetch(`https://one-stop-shop-api.vercel.app/deleteProduct/${id}`, {
                         method: "DELETE",
                         headers: { "content-type": "application/json" }
                     })

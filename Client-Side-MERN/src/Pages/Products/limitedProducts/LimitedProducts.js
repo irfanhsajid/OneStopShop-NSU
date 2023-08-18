@@ -9,7 +9,7 @@ AOS.init();
 const LimitedProducts = () => {
     const [products, setProducts] = useState([]); 
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://one-stop-shop-api.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);

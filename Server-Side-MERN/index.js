@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 //app.use(cors());
 app.use(cors(
     {
-      origin:["http://localhost:3001"], //frontend link setup 
+      origin:"*", //frontend link setup 
       methods:["POST", "GET","DELETE","PUT"], //methods we will use to interact with the database
       credentials:true
     }

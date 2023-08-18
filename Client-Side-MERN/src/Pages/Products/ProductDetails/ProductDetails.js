@@ -13,14 +13,14 @@ const ProductDetails = () => {
     const [product, setProduct] = useState([]);
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://one-stop-shop-api.vercel.app/products')
             .then(res => res.json())
             .then(data => setProduct(data))
     }, []);
     const detailsInfo = product.filter(data => data._id === productId);
 
     const onSubmit = data => {
-        fetch(`http://localhost:3000/addOrder`, {
+        fetch(`https://one-stop-shop-api.vercel.app/addOrder`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data),

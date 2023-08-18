@@ -23,7 +23,7 @@ const MakeAdmin = () => {
                     swal("Poof! This user is set as an ADMIN!", {
                         icon: "success",
                     });
-                    fetch('http://localhost:3000/users/admin', {
+                    fetch('https://one-stop-shop-api.vercel.app/users/admin', {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
