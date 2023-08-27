@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000;
 //middleware
 // app.use(cors());
 // cross origin issue
-const allowedOrigins = ["http://localhost:3000", "https://one-stop-shop-api.vercel.app"]
+const allowedOrigins = ["http://localhost:3000","http://localhost:5173", "https://one-stop-shop.vercel.app"]
 
 app.use(
   cors({
