@@ -8,7 +8,15 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 //middleware
-app.use(cors());
+// app.use(cors());
+// cross origin issue
+const allowedOrigins = ["http://localhost:3000", "https://one-stop-shop-api.vercel.app"]
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+  })
+)
 // app.use(cors(
 //     {
 //       origin:"*", //frontend link setup 
